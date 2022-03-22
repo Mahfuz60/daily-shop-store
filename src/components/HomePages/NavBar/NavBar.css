@@ -1,0 +1,22 @@
+.navbar {
+  background-color: rgb(2, 116, 209);
+}
+
+.navbar-brand {
+  font-size: 30px;
+  color: white;
+  font-weight: bold;
+}
+.navbar-brand:hover {
+  color: tomato;
+}
+.navbar-nav li a {
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.navbar-nav li a:hover {
+  color: cyan;
+}
