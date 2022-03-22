@@ -23,7 +23,7 @@ const ProductDetail = () => {
     if (productId && productId !== '') {
       fetchSelectedProduct();
     }
-  }, [productId]);
+  }, [fetchSelectedProduct]);
 
   const handleRemoveProduct = () => {
     return dispatch(RemoveSelectedProduct({}));
