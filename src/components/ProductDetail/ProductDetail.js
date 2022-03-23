@@ -11,7 +11,7 @@ const ProductDetail = () => {
   const product = useSelector((state) => state.product);
   const { id, title, image, category, price, description } = product;
 
-  const fetchSelectedProduct = async (productId) => {
+  const fetchSelectedProduct = async () => {
     const response = await axios.get(`https://fakestoreapi.com/products/${productId}`).catch((err) => {
       console.log('error', err);
     });
@@ -23,8 +23,7 @@ const ProductDetail = () => {
     if (productId && productId !== '') {
       fetchSelectedProduct();
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [fetchSelectedProduct.productId]);
+  }, []);
 
   const handleRemoveProduct = () => {
     return dispatch(RemoveSelectedProduct({}));
