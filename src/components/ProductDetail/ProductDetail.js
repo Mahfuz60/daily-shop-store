@@ -23,7 +23,8 @@ const ProductDetail = () => {
     if (productId && productId !== '') {
       fetchSelectedProduct();
     }
-  }, [productId]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [fetchSelectedProduct.productId]);
 
   const handleRemoveProduct = () => {
     return dispatch(RemoveSelectedProduct({}));
