@@ -9,7 +9,8 @@ const ProductList = () => {
   const dispatch = useDispatch();
 
   const fetchProducts = async (products) => {
-    const response = await axios.get('https://fakestoreapi.com/products').catch((err) => {
+    const response = await axios.get('https://fakestoreapi.com/products')
+    .catch((err) => {
       console.log('error', err);
     });
     dispatch(SetProducts(response.data));
@@ -19,9 +20,9 @@ const ProductList = () => {
     fetchProducts();
   }, []);
 
-  console.log('productList:', products);
+  // console.log('productList:', products);
   return (
-    <div className='container row mt-3'>
+    <div className='container row mt-3 ' >
       <Product />
     </div>
   );

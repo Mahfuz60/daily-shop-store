@@ -13,9 +13,6 @@ export const ProductReducer = (state = initialState, { type, payload }) => {
   }
 };
 
-//action(type,payload)
-// case ActionTypes.REMOVE_SELECTED_PRODUCT:
-//   return state;
 
 export const SelectedProductReducer = (state = {}, { type, payload }) => {
   switch (type) {
